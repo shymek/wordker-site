@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wordker – Usuń swoje konto</title>
+  <meta name="description" content="Jak usunąć konto Wordker i jakie dane są wtedy usuwane.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="wrap">
+    <nav class="topbar">
+      <a class="brand" href="/pl/"><span class="tile">W</span>Wordker</a>
+      <span class="lang">PL<a href="/delete-account/">EN</a></span>
+    </nav>
+
+    <article class="card">
+      <h1>Usuń swoje konto</h1>
+      <p>Konto Wordker możesz usunąć w dowolnym momencie, z aplikacją lub bez niej. Usunięcie jest natychmiastowe i nieodwracalne.</p>
+
+      <h2>W aplikacji</h2>
+      <p>Otwórz <em>Konto</em> i wybierz <em>Usuń konto</em>. Jeśli konto ma hasło, zostaniesz o nie poproszony jeszcze raz.</p>
+
+      <h2>Bez aplikacji</h2>
+      <p>Na stronie poniżej podaj adres e-mail swojego konta. Wyślemy link; jego otwarcie i potwierdzenie usuwa konto. Link jest ważny przez godzinę.</p>
+      <p class="badges" style="justify-content:flex-start">
+        <a class="badge" href="https://api.wordker.app/api/users/delete-account/">Poproś o link do usunięcia</a>
+      </p>
+
+      <h2>Co zostaje usunięte</h2>
+      <ul>
+        <li>adres e-mail, hasło, pseudonim i awatar,</li>
+        <li>powiązanie urządzenia z kontem i wszystkie aktywne sesje,</li>
+        <li>token powiadomień push.</li>
+      </ul>
+      <p>Twoje słowa i wyniki pozostają w rozegranych rundach, przypisane do anonimowego zastępnika, bo wyniki innych graczy i rankingi są z nich budowane. Nie identyfikują już Ciebie. Kopie w kopiach zapasowych bazy znikają wraz z ich rotacją.</p>
+
+      <h2>Grasz bez konta?</h2>
+      <p>Anonimowe profile nie mają adresu e-mail, więc link powyżej ich nie znajdzie. Usuń profil w aplikacji (<em>Konto → Usuń konto</em>) albo po prostu przestań grać: anonimowe profile są usuwane automatycznie po 30 dniach bez gry.</p>
+
+      <h2>Pytania</h2>
+      <p>Napisz na <a href="mailto:wordker@szymion.dev">wordker@szymion.dev</a>. Zobacz też <a href="/privacy/pl/">Politykę prywatności</a>.</p>
+    </article>
+
+    <footer>
+      <a href="/pl/">Strona główna</a> ·
+      <a href="/privacy/pl/">Polityka prywatności</a> ·
+      <a href="/delete-account/">English version</a>
+    </footer>
+  </div>
+</body>
+</html>
