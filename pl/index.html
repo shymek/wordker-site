@@ -3,40 +3,187 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wordker – gra słowna dla wielu graczy</title>
-  <meta name="description" content="Wordker to gra słowna online: znajduj słowa na planszy 4x4 w trzyminutowych rundach na żywo, po polsku i angielsku.">
+  <title>Wordker – gra słowna na żywo dla wielu graczy</title>
+  <meta name="description" content="Wordker to gra słowna na żywo: co trzy minuty wszyscy dostają tę samą planszę 4×4. Po polsku i po angielsku. Dołącz do bety na Androidzie lub iPhonie.">
+  <link rel="canonical" href="https://wordker.app/pl/">
+  <link rel="alternate" hreflang="en" href="https://wordker.app/">
+  <link rel="alternate" hreflang="pl" href="https://wordker.app/pl/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wordker.app/pl/">
+  <meta property="og:title" content="Wordker – jedna plansza, wszyscy naraz, na żywo">
+  <meta property="og:description" content="Co trzy minuty wszyscy dostają tę samą planszę 4×4. Dołącz do bety na Androidzie lub iPhonie.">
+  <meta property="og:image" content="https://wordker.app/assets/og-pl.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/landing.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
-  <div class="wrap">
+<body class="landing">
+  <div class="shell">
     <nav class="topbar">
       <a class="brand" href="/pl/"><span class="tile">W</span>Wordker</a>
-      <span class="lang">PL<a href="/">EN</a></span>
+      <span class="lang">PL<a href="/" hreflang="en" lang="en">EN</a></span>
     </nav>
 
-    <section class="hero">
-      <div class="grid" aria-hidden="true">
-        <span class="on">S</span><span class="on">Ł</span><span>K</span><span>A</span>
-        <span>E</span><span class="on">O</span><span class="on">W</span><span>N</span>
-        <span>T</span><span>I</span><span class="on">A</span><span>S</span>
-        <span>L</span><span>E</span><span>R</span><span>M</span>
-      </div>
-      <h1>Znajduj słowa. Ścigaj się z czasem. Wygrywaj.</h1>
-      <p class="lead">Trzyminutowe rundy na żywo na planszy 4×4, z graczami z całego świata. Po polsku i angielsku.</p>
-      <div class="badges">
-        <span class="badge soon">Google Play – wkrótce</span>
-        <span class="badge soon">App Store – wkrótce</span>
-      </div>
-    </section>
+    <main>
+      <section class="lp-hero">
+        <div>
+          <h1 class="lp-title"><span>Jedna plansza.</span><span>Wszyscy naraz.</span><span>Na żywo.</span></h1>
+          <p class="lp-lead">Wordker to gra słowna rozgrywana na żywo w trzyminutowych rundach. Wszyscy dostają tę samą planszę 4×4 w tej samej chwili, a gdy czas się skończy, widzisz, które miejsce zajmujesz. Po polsku i po angielsku.</p>
+
+          <form class="beta-form" action="https://api.wordker.app/api/beta/signup/" method="post" novalidate>
+            <div class="beta-platform" role="radiogroup" aria-labelledby="beta-platform-hero">
+              <span class="beta-label" id="beta-platform-hero">Twój telefon</span>
+              <span class="seg">
+                <label><input type="radio" name="platform" value="android" checked><span>Android</span></label>
+                <label><input type="radio" name="platform" value="ios"><span>iPhone</span></label>
+              </span>
+            </div>
+            <label class="beta-label" for="beta-email-hero">E-mail</label>
+            <div class="beta-row">
+              <input id="beta-email-hero" type="email" name="email" autocomplete="email" inputmode="email" placeholder="ty@example.com" required>
+              <button class="btn" type="submit">Dołącz do bety</button>
+            </div>
+            <div class="beta-trap" aria-hidden="true">
+              <label>To pole zostaw puste <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <p class="beta-hint">Podaj adres swojego konta Google. Google Play wpuszcza testerów właśnie po tym adresie.</p>
+            <p class="beta-status" role="alert"></p>
+            <p class="beta-consent">Twojego adresu używamy wyłącznie do prowadzenia bety. <a href="/privacy/pl/#beta">Polityka prywatności</a></p>
+            <noscript><p class="beta-status">Ten formularz wymaga JavaScriptu. Możesz też napisać na <a href="mailto:wordker@szymion.dev">wordker@szymion.dev</a>.</p></noscript>
+            <div class="beta-done" tabindex="-1">
+              <h3>Jesteś na liście bety</h3>
+              <p></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="lp-hero-device">
+          <div class="device device-iphone">
+            <img src="/assets/screens/pl/04-game-selecting.webp" width="660" height="1434" alt="Trwająca runda Wordkera: gracz przeciąga po planszy 4×4 słowo LIZUSU, do końca zostało 1:50.">
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-section" aria-labelledby="round-title">
+        <h2 class="lp-h2" id="round-title">Jak wygląda runda</h2>
+        <p class="lp-sub">Runda trwa cały czas. Co trzy minuty zaczyna się nowa.</p>
+
+        <div class="steps-wrap">
+          <svg class="steps-path" viewBox="0 0 100 116" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M15.33 22 L50 94 L84.67 22" vector-effect="non-scaling-stroke"/>
+          </svg>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <div class="device device-iphone">
+                <img src="/assets/screens/pl/03-home.webp" width="660" height="1434" loading="lazy" alt="Ekran główny z codziennymi wyzwaniami, podglądem aktualnej planszy, liczbą graczy online i przyciskiem dołączenia do gry.">
+              </div>
+              <h3>Dołącz do rundy</h3>
+              <p>Ekran główny pokazuje aktualną planszę i czas do końca. Jedno tapnięcie i grasz.</p>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <div class="device device-iphone">
+                <img src="/assets/screens/pl/05-game-words.webp" width="660" height="1434" loading="lazy" alt="Ekran gry: znalezione słowa nad planszą z literami, wynik i czas do końca rundy.">
+              </div>
+              <h3>Przeciągaj po literach</h3>
+              <p>Sąsiednie pola układają się w słowo, także po skosie. Im dłuższe słowo, tym więcej punktów.</p>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <div class="device device-iphone">
+                <img src="/assets/screens/pl/06-results.webp" width="660" height="1434" loading="lazy" alt="Ekran wyników: zdobyte punkty, ranking rundy i pełna lista słów, które były na planszy.">
+              </div>
+              <h3>Sprawdź, co Ci umknęło</h3>
+              <p>Dostajesz ranking rundy i wszystkie słowa, które kryły się na planszy.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="lp-section lp-row" aria-labelledby="ranks-title">
+        <div class="lp-row-media">
+          <div class="device device-pixel">
+            <img src="/assets/screens/pl/07-leaderboard.webp" width="600" height="1333" loading="lazy" alt="Ranking z podium dla trzech najlepszych graczy i zakładkami: dziś, ten tydzień, ten miesiąc.">
+          </div>
+        </div>
+        <div>
+          <h2 class="lp-h2" id="ranks-title">Trzy rankingi, trzy szanse</h2>
+          <p class="lp-sub">Każda runda liczy się do rankingu dnia, tygodnia i miesiąca. Jeden dobry wieczór może dać Ci dzisiejsze podium, nawet jeśli miesiąc należy już do kogoś innego.</p>
+        </div>
+      </section>
+
+      <section class="lp-section lp-row" aria-labelledby="more-title">
+        <div>
+          <h2 class="lp-h2" id="more-title">Na jeszcze jedną rundę</h2>
+          <dl class="lp-facts">
+            <dt>Codzienne wyzwania i serie</dt>
+            <dd>Trzy nowe wyzwania każdego dnia i seria, która rośnie z każdym dniem gry.</dd>
+            <dt>Plansze po polsku i po angielsku</dt>
+            <dd>Język słów wybierasz niezależnie od języka aplikacji, więc możesz ćwiczyć dowolny z nich.</dd>
+            <dt>Bez zakładania konta</dt>
+            <dd>Otwierasz aplikację i grasz. Konto możesz założyć później, jeśli zechcesz zachować wyniki.</dd>
+          </dl>
+        </div>
+        <div class="lp-row-media lp-pair">
+          <div class="device device-pixel">
+            <img src="/assets/screens/pl/08-settings.webp" width="600" height="1333" loading="lazy" alt="Ustawienia z osobnym wyborem języka gry i języka aplikacji.">
+          </div>
+          <div class="device device-pixel">
+            <img src="/assets/screens/pl/09-account.webp" width="600" height="1333" loading="lazy" alt="Ekran konta ze statystykami: seria dni, najlepsza seria, rozegrane gry i łączny wynik.">
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-band" aria-labelledby="beta-title">
+        <div>
+          <h2 class="lp-h2" id="beta-title">Zagraj przed premierą</h2>
+          <p class="lp-sub">Wordker jest w fazie beta. Testerzy na Androidzie dostają grę przez Google Play, na iPhonie przez TestFlight. Zostaw e-mail, a wyślemy zaproszenie.</p>
+        </div>
+
+        <form class="beta-form" action="https://api.wordker.app/api/beta/signup/" method="post" novalidate>
+          <div class="beta-platform" role="radiogroup" aria-labelledby="beta-platform-band">
+            <span class="beta-label" id="beta-platform-band">Twój telefon</span>
+            <span class="seg">
+              <label><input type="radio" name="platform" value="android" checked><span>Android</span></label>
+              <label><input type="radio" name="platform" value="ios"><span>iPhone</span></label>
+            </span>
+          </div>
+          <label class="beta-label" for="beta-email-band">E-mail</label>
+          <div class="beta-row">
+            <input id="beta-email-band" type="email" name="email" autocomplete="email" inputmode="email" placeholder="ty@example.com" required>
+            <button class="btn" type="submit">Dołącz do bety</button>
+          </div>
+          <div class="beta-trap" aria-hidden="true">
+            <label>To pole zostaw puste <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <p class="beta-hint">Podaj adres swojego konta Google. Google Play wpuszcza testerów właśnie po tym adresie.</p>
+          <p class="beta-status" role="alert"></p>
+          <p class="beta-consent">Twojego adresu używamy wyłącznie do prowadzenia bety. <a href="/privacy/pl/#beta">Polityka prywatności</a></p>
+          <noscript><p class="beta-status">Ten formularz wymaga JavaScriptu. Możesz też napisać na <a href="mailto:wordker@szymion.dev">wordker@szymion.dev</a>.</p></noscript>
+          <div class="beta-done" tabindex="-1">
+            <h3>Jesteś na liście bety</h3>
+            <p></p>
+          </div>
+        </form>
+      </section>
+    </main>
 
     <footer>
-      <a href="/privacy/pl/">Polityka prywatności</a> ·
-      <a href="/delete-account/pl/">Usuń konto</a> ·
+      <a href="/privacy/pl/">Polityka prywatności</a>
+      <a href="/delete-account/pl/">Usuń konto</a>
       <a href="mailto:wordker@szymion.dev">Kontakt</a>
     </footer>
   </div>
+
+  <script src="/assets/beta.js" defer></script>
 </body>
 </html>
