@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# Rebuilds the landing page images from the app repo's raw store captures.
+# Rebuilds the landing page images from the app's raw store captures.
 #
-#   tools/build-assets.sh [path-to-wordker_app]   (default: ../wordker_app)
+#   tools/build-assets.sh [path-to-app]   (default: ../app, the Flutter app
+#                                          next to site/ in the monorepo)
 #
 # Needs cwebp (brew install webp) and Python with Pillow. Screens are resized
 # to twice their largest on-page width, so they stay sharp on retina displays.
 set -euo pipefail
 
 SITE="$(cd "$(dirname "$0")/.." && pwd)"
-APP="${1:-$SITE/../wordker_app}"
+APP="${1:-$SITE/../app}"
 SHOTS="$APP/store/screenshots"
 
 # screen name -> platform whose frame it is shown in
